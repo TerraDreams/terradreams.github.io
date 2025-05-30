@@ -1,0 +1,60 @@
+@import "tailwindcss";
+@layer components {
+    .body {
+        @apply font-sans text-palette1 font-light text-justify;
+    }
+    .image-container {
+        @apply border-4 border-palette5 aspect-square lg:h-52 md:h-44 h-40;
+    }
+    .test-border {
+        @apply border-2 border-palette1;
+    }
+    .sidecard {
+        @apply bg-palette4 flex-column justify-evenly items-end;
+    }
+    .scroll-screens {
+        @apply h-dvh w-full flex justify-between backdrop-blur-md;
+    }
+    .img-display img{
+        @apply border-palette5 border-1;
+    }
+    .img-display-column {
+        @apply w-1/3 flex-column;
+    }
+    .item-display-area {
+        @apply bg-palette3 h-full w-11/20 flex rounded-r-md overflow-auto px-4
+    }
+    .profile-desc {
+        @apply h-80 bg-[url(../img/bottom-text-bg3.webp)] bg-cover px-4 mt-4 text-xs flex flex-col gap-y-2 rounded-bl-md text-palette5;
+    }
+
+}
+
+@theme {
+    --color-palette1: #F8F8FF;
+    --color-palette2: #BEC0C8;
+    --color-palette3: #848890;
+    --color-palette4: #4a5058;
+    --color-palette5: #0C0C0C;
+}
+
+@utility flex-column {
+    @apply flex flex-col;
+}
+
+@utility resp-3xl {
+    @apply lg:text-3xl md:text-2xl sm:text-xl;
+}
+@utility resp-2xl {
+    @apply lg:text-2xl md:text-xl sm:text-lg;
+}
+@utility resp-xl {
+    @apply lg:text-xl md:text-lg sm:text-base;
+}
+
+@utility resp-xs {
+    @apply text-xs leading-4 md:leading-normal;
+}
+@utility resp-title-lineheight {
+    @apply text-xs leading-3 lg:leading-4;
+}
